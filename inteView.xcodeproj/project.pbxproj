@@ -1,0 +1,868 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2993915819F5F1DF002D2FAD /* OsgAndroidNotifyHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2993914A19F5F1DF002D2FAD /* OsgAndroidNotifyHandler.cpp */; };
+		2993915919F5F1DF002D2FAD /* OsgConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2993914C19F5F1DF002D2FAD /* OsgConverter.mm */; };
+		2993915A19F5F1DF002D2FAD /* OsgMainApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2993914E19F5F1DF002D2FAD /* OsgMainApp.cpp */; };
+		2993915B19F5F1DF002D2FAD /* OSGOpcodeHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2993915019F5F1DF002D2FAD /* OSGOpcodeHandler.cpp */; };
+		2993915C19F5F1DF002D2FAD /* OSGOpcodeShell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2993915219F5F1DF002D2FAD /* OSGOpcodeShell.cpp */; };
+		2993915D19F5F1DF002D2FAD /* Osgpick.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2993915419F5F1DF002D2FAD /* Osgpick.cpp */; };
+		2993915E19F5F1DF002D2FAD /* OsgTouchManipulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2993915619F5F1DF002D2FAD /* OsgTouchManipulator.cpp */; };
+		2993918D19F64557002D2FAD /* login_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2993918C19F64557002D2FAD /* login_bg@2x.png */; };
+		2994CFA719F4D87C0080995C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFA619F4D87C0080995C /* main.m */; };
+		2994CFAA19F4D87C0080995C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFA919F4D87C0080995C /* AppDelegate.m */; };
+		2994CFB219F4D87C0080995C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2994CFB119F4D87C0080995C /* Images.xcassets */; };
+		2994CFB519F4D87C0080995C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2994CFB319F4D87C0080995C /* LaunchScreen.xib */; };
+		2994CFC119F4D87C0080995C /* inteViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFC019F4D87C0080995C /* inteViewTests.m */; };
+		2994D01819F4DA110080995C /* osgNativeLib.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFDA19F4DA110080995C /* osgNativeLib.mm */; };
+		2994D01919F4DA110080995C /* IVA_XML.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFDC19F4DA110080995C /* IVA_XML.cpp */; };
+		2994D01A19F4DA110080995C /* SlimXml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFDE19F4DA110080995C /* SlimXml.cpp */; };
+		2994D01B19F4DA110080995C /* XmlSchema.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFE019F4DA110080995C /* XmlSchema.cpp */; };
+		2994D01C19F4DA110080995C /* BAscii.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFE319F4DA110080995C /* BAscii.cpp */; };
+		2994D01D19F4DA110080995C /* BCompress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFE519F4DA110080995C /* BCompress.cpp */; };
+		2994D01E19F4DA110080995C /* BCompressData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFE719F4DA110080995C /* BCompressData.cpp */; };
+		2994D01F19F4DA110080995C /* BEdgeBreakerCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFE919F4DA110080995C /* BEdgeBreakerCommon.cpp */; };
+		2994D02019F4DA110080995C /* BEdgeBreakerCompress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFEA19F4DA110080995C /* BEdgeBreakerCompress.cpp */; };
+		2994D02119F4DA110080995C /* BEdgeBreakerDecompress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFEB19F4DA110080995C /* BEdgeBreakerDecompress.cpp */; };
+		2994D02219F4DA110080995C /* BOpcodeHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFED19F4DA110080995C /* BOpcodeHandler.cpp */; };
+		2994D02319F4DA110080995C /* BOpcodeShell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFEF19F4DA110080995C /* BOpcodeShell.cpp */; };
+		2994D02419F4DA110080995C /* BOpcodeShellAscii.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFF119F4DA110080995C /* BOpcodeShellAscii.cpp */; };
+		2994D02519F4DA110080995C /* BPointCloud.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFF219F4DA110080995C /* BPointCloud.cpp */; };
+		2994D02619F4DA110080995C /* BPolyhedron.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFF419F4DA110080995C /* BPolyhedron.cpp */; };
+		2994D02719F4DA110080995C /* BPolyhedronAscii.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFF619F4DA110080995C /* BPolyhedronAscii.cpp */; };
+		2994D02819F4DA110080995C /* BPolyPoly.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFF719F4DA110080995C /* BPolyPoly.cpp */; };
+		2994D02919F4DA110080995C /* BStreamFileToolkit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFFA19F4DA110080995C /* BStreamFileToolkit.cpp */; };
+		2994D02A19F4DA110080995C /* cache_memory_object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2994CFFD19F4DA110080995C /* cache_memory_object.cpp */; };
+		2994D02B19F4DA110080995C /* tempfile_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2994D00019F4DA110080995C /* tempfile_utils.cpp */; };
+		2994D02C19F4DA110080995C /* utf_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2994D00219F4DA110080995C /* utf_utils.cpp */; };
+		2994D02D19F4DA110080995C /* vconf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2994D00619F4DA110080995C /* vconf.cpp */; };
+		2994D02E19F4DA110080995C /* vdlist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2994D00819F4DA110080995C /* vdlist.cpp */; };
+		2994D02F19F4DA110080995C /* vhash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2994D00A19F4DA110080995C /* vhash.cpp */; };
+		2994D03019F4DA110080995C /* vlist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2994D00C19F4DA110080995C /* vlist.cpp */; };
+		2994D03119F4DA110080995C /* vlogfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2994D00E19F4DA110080995C /* vlogfile.cpp */; };
+		2994D03319F4DABE0080995C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2994D03219F4DABE0080995C /* OpenGLES.framework */; };
+		2994D03519F4DAC70080995C /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2994D03419F4DAC70080995C /* GLKit.framework */; };
+		2994D03719F4DAD00080995C /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2994D03619F4DAD00080995C /* libz.1.2.5.dylib */; };
+		2994D03919F4DADA0080995C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2994D03819F4DADA0080995C /* ImageIO.framework */; };
+		2994D03B19F4DAE50080995C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2994D03A19F4DAE50080995C /* CoreGraphics.framework */; };
+		2994D03D19F4DAF00080995C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2994D03C19F4DAF00080995C /* QuartzCore.framework */; };
+		2994D03F19F4DAF70080995C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2994D03E19F4DAF70080995C /* UIKit.framework */; };
+		2994D04119F4DAFD0080995C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2994D04019F4DAFD0080995C /* Foundation.framework */; };
+		2994D07119F4DF0A0080995C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2994D07019F4DF0A0080995C /* Default-568h@2x.png */; };
+		29A97C9A1A3E76E900C3ECEB /* libOpenThreads.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A97C841A3E76E900C3ECEB /* libOpenThreads.a */; };
+		29A97C9B1A3E76E900C3ECEB /* libosg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A97C851A3E76E900C3ECEB /* libosg.a */; };
+		29A97C9C1A3E76E900C3ECEB /* libosgAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A97C861A3E76E900C3ECEB /* libosgAnimation.a */; };
+		29A97C9E1A3E76E900C3ECEB /* libosgdb_freetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A97C881A3E76E900C3ECEB /* libosgdb_freetype.a */; };
+		29A97C9F1A3E76E900C3ECEB /* libosgdb_imageio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A97C891A3E76E900C3ECEB /* libosgdb_imageio.a */; };
+		29A97CA01A3E76E900C3ECEB /* libosgdb_ive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A97C8A1A3E76E900C3ECEB /* libosgdb_ive.a */; };
+		29A97CA11A3E76E900C3ECEB /* libosgdb_obj.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A97C8B1A3E76E900C3ECEB /* libosgdb_obj.a */; };
+		29A97CA21A3E76E900C3ECEB /* libosgdb_osg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A97C8C1A3E76E900C3ECEB /* libosgdb_osg.a */; };
+		29A97CA31A3E76E900C3ECEB /* libosgFX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A97C8D1A3E76E900C3ECEB /* libosgFX.a */; };
+		29A97CA41A3E76E900C3ECEB /* libosgGA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A97C8E1A3E76E900C3ECEB /* libosgGA.a */; };
+		29A97CA51A3E76E900C3ECEB /* libosgManipulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A97C8F1A3E76E900C3ECEB /* libosgManipulator.a */; };
+		29A97CA61A3E76E900C3ECEB /* libosgParticle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A97C901A3E76E900C3ECEB /* libosgParticle.a */; };
+		29A97CA71A3E76E900C3ECEB /* libosgPresentation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A97C911A3E76E900C3ECEB /* libosgPresentation.a */; };
+		29A97CA81A3E76E900C3ECEB /* libosgShadow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A97C921A3E76E900C3ECEB /* libosgShadow.a */; };
+		29A97CA91A3E76E900C3ECEB /* libosgSim.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A97C931A3E76E900C3ECEB /* libosgSim.a */; };
+		29A97CAA1A3E76E900C3ECEB /* libosgTerrain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A97C941A3E76E900C3ECEB /* libosgTerrain.a */; };
+		29A97CAB1A3E76E900C3ECEB /* libosgText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A97C951A3E76E900C3ECEB /* libosgText.a */; };
+		29A97CAC1A3E76E900C3ECEB /* libosgUtil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A97C961A3E76E900C3ECEB /* libosgUtil.a */; };
+		29A97CAD1A3E76E900C3ECEB /* libosgViewer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A97C971A3E76E900C3ECEB /* libosgViewer.a */; };
+		29A97CAE1A3E76E900C3ECEB /* libosgVolume.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A97C981A3E76E900C3ECEB /* libosgVolume.a */; };
+		29A97CAF1A3E76E900C3ECEB /* libosgWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A97C991A3E76E900C3ECEB /* libosgWidget.a */; };
+		29B987E419F4E524007DDB16 /* MainViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29B987E319F4E524007DDB16 /* MainViewController.mm */; };
+		29B987E719F4E56B007DDB16 /* ShowOsgViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29B987E619F4E56B007DDB16 /* ShowOsgViewController.mm */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		A57FE9691BE060F400AF0013 /* ZP-822107_A1.i3d in Resources */ = {isa = PBXBuildFile; fileRef = A57FE9681BE060F400AF0013 /* ZP-822107_A1.i3d */; };
+		A57FE96C1BE0617800AF0013 /* I3D_XML.mm in Sources */ = {isa = PBXBuildFile; fileRef = A57FE96A1BE0617800AF0013 /* I3D_XML.mm */; };
+		A57FE9821BE0A69000AF0013 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A57FE9811BE0A69000AF0013 /* libz.dylib */; };
+		A59D98881BE6F9E600C69FEA /* osgView.mm in Sources */ = {isa = PBXBuildFile; fileRef = A59D98871BE6F9E600C69FEA /* osgView.mm */; };
+		A5A72C9F1BDF75C7002CCC44 /* skydome.ive in Resources */ = {isa = PBXBuildFile; fileRef = A5A72C9E1BDF75C7002CCC44 /* skydome.ive */; };
+		A5A72CA11BDF770D002CCC44 /* teapot.IVE in Resources */ = {isa = PBXBuildFile; fileRef = A5A72CA01BDF770D002CCC44 /* teapot.IVE */; };
+		A5D8E5571BE3045B0088FCAA /* libosgDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A97C871A3E76E900C3ECEB /* libosgDB.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2994CFBB19F4D87C0080995C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2994CF9919F4D87C0080995C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2994CFA019F4D87C0080995C;
+			remoteInfo = inteView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2993914A19F5F1DF002D2FAD /* OsgAndroidNotifyHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OsgAndroidNotifyHandler.cpp; sourceTree = "<group>"; };
+		2993914B19F5F1DF002D2FAD /* OsgAndroidNotifyHandler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OsgAndroidNotifyHandler.hpp; sourceTree = "<group>"; };
+		2993914C19F5F1DF002D2FAD /* OsgConverter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OsgConverter.mm; sourceTree = "<group>"; };
+		2993914D19F5F1DF002D2FAD /* OsgConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OsgConverter.h; sourceTree = "<group>"; };
+		2993914E19F5F1DF002D2FAD /* OsgMainApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OsgMainApp.cpp; sourceTree = "<group>"; };
+		2993914F19F5F1DF002D2FAD /* OsgMainApp.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OsgMainApp.hpp; sourceTree = "<group>"; };
+		2993915019F5F1DF002D2FAD /* OSGOpcodeHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OSGOpcodeHandler.cpp; sourceTree = "<group>"; };
+		2993915119F5F1DF002D2FAD /* OSGOpcodeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSGOpcodeHandler.h; sourceTree = "<group>"; };
+		2993915219F5F1DF002D2FAD /* OSGOpcodeShell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OSGOpcodeShell.cpp; sourceTree = "<group>"; };
+		2993915319F5F1DF002D2FAD /* OSGOpcodeShell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSGOpcodeShell.h; sourceTree = "<group>"; };
+		2993915419F5F1DF002D2FAD /* Osgpick.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Osgpick.cpp; sourceTree = "<group>"; };
+		2993915519F5F1DF002D2FAD /* Osgpick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Osgpick.h; sourceTree = "<group>"; };
+		2993915619F5F1DF002D2FAD /* OsgTouchManipulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OsgTouchManipulator.cpp; sourceTree = "<group>"; };
+		2993915719F5F1DF002D2FAD /* OsgTouchManipulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OsgTouchManipulator.h; sourceTree = "<group>"; };
+		2993918C19F64557002D2FAD /* login_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_bg@2x.png"; sourceTree = "<group>"; };
+		2994CFA119F4D87C0080995C /* inteView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inteView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2994CFA519F4D87C0080995C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2994CFA619F4D87C0080995C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2994CFA819F4D87C0080995C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2994CFA919F4D87C0080995C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2994CFB119F4D87C0080995C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2994CFB419F4D87C0080995C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2994CFBA19F4D87C0080995C /* inteViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = inteViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2994CFBF19F4D87C0080995C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2994CFC019F4D87C0080995C /* inteViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = inteViewTests.m; sourceTree = "<group>"; };
+		2994CFD919F4DA110080995C /* osgNativeLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = osgNativeLib.h; sourceTree = "<group>"; };
+		2994CFDA19F4DA110080995C /* osgNativeLib.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = osgNativeLib.mm; sourceTree = "<group>"; };
+		2994CFDC19F4DA110080995C /* IVA_XML.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IVA_XML.cpp; sourceTree = "<group>"; };
+		2994CFDD19F4DA110080995C /* IVA_XML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IVA_XML.h; sourceTree = "<group>"; };
+		2994CFDE19F4DA110080995C /* SlimXml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SlimXml.cpp; sourceTree = "<group>"; };
+		2994CFDF19F4DA110080995C /* SlimXml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlimXml.h; sourceTree = "<group>"; };
+		2994CFE019F4DA110080995C /* XmlSchema.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XmlSchema.cpp; sourceTree = "<group>"; };
+		2994CFE119F4DA110080995C /* XmlSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XmlSchema.h; sourceTree = "<group>"; };
+		2994CFE319F4DA110080995C /* BAscii.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BAscii.cpp; sourceTree = "<group>"; };
+		2994CFE419F4DA110080995C /* BByteStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BByteStream.h; sourceTree = "<group>"; };
+		2994CFE519F4DA110080995C /* BCompress.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BCompress.cpp; sourceTree = "<group>"; };
+		2994CFE619F4DA110080995C /* BCompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCompress.h; sourceTree = "<group>"; };
+		2994CFE719F4DA110080995C /* BCompressData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BCompressData.cpp; sourceTree = "<group>"; };
+		2994CFE819F4DA110080995C /* BEdgeBreaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEdgeBreaker.h; sourceTree = "<group>"; };
+		2994CFE919F4DA110080995C /* BEdgeBreakerCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BEdgeBreakerCommon.cpp; sourceTree = "<group>"; };
+		2994CFEA19F4DA110080995C /* BEdgeBreakerCompress.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BEdgeBreakerCompress.cpp; sourceTree = "<group>"; };
+		2994CFEB19F4DA110080995C /* BEdgeBreakerDecompress.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BEdgeBreakerDecompress.cpp; sourceTree = "<group>"; };
+		2994CFEC19F4DA110080995C /* BInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BInternal.h; sourceTree = "<group>"; };
+		2994CFED19F4DA110080995C /* BOpcodeHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BOpcodeHandler.cpp; sourceTree = "<group>"; };
+		2994CFEE19F4DA110080995C /* BOpcodeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOpcodeHandler.h; sourceTree = "<group>"; };
+		2994CFEF19F4DA110080995C /* BOpcodeShell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BOpcodeShell.cpp; sourceTree = "<group>"; };
+		2994CFF019F4DA110080995C /* BOpcodeShell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOpcodeShell.h; sourceTree = "<group>"; };
+		2994CFF119F4DA110080995C /* BOpcodeShellAscii.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BOpcodeShellAscii.cpp; sourceTree = "<group>"; };
+		2994CFF219F4DA110080995C /* BPointCloud.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BPointCloud.cpp; sourceTree = "<group>"; };
+		2994CFF319F4DA110080995C /* BPointCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPointCloud.h; sourceTree = "<group>"; };
+		2994CFF419F4DA110080995C /* BPolyhedron.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BPolyhedron.cpp; sourceTree = "<group>"; };
+		2994CFF519F4DA110080995C /* BPolyhedron.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPolyhedron.h; sourceTree = "<group>"; };
+		2994CFF619F4DA110080995C /* BPolyhedronAscii.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BPolyhedronAscii.cpp; sourceTree = "<group>"; };
+		2994CFF719F4DA110080995C /* BPolyPoly.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BPolyPoly.cpp; sourceTree = "<group>"; };
+		2994CFF819F4DA110080995C /* BPolyPoly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPolyPoly.h; sourceTree = "<group>"; };
+		2994CFF919F4DA110080995C /* BStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BStream.h; sourceTree = "<group>"; };
+		2994CFFA19F4DA110080995C /* BStreamFileToolkit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BStreamFileToolkit.cpp; sourceTree = "<group>"; };
+		2994CFFB19F4DA110080995C /* BStreamFileToolkit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BStreamFileToolkit.h; sourceTree = "<group>"; };
+		2994CFFD19F4DA110080995C /* cache_memory_object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cache_memory_object.cpp; sourceTree = "<group>"; };
+		2994CFFE19F4DA110080995C /* cache_memory_object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cache_memory_object.h; sourceTree = "<group>"; };
+		2994CFFF19F4DA110080995C /* hqsort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hqsort.h; sourceTree = "<group>"; };
+		2994D00019F4DA110080995C /* tempfile_utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tempfile_utils.cpp; sourceTree = "<group>"; };
+		2994D00119F4DA110080995C /* tempfile_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tempfile_utils.h; sourceTree = "<group>"; };
+		2994D00219F4DA110080995C /* utf_utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = utf_utils.cpp; sourceTree = "<group>"; };
+		2994D00319F4DA110080995C /* utf_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utf_utils.h; sourceTree = "<group>"; };
+		2994D00419F4DA110080995C /* varray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = varray.h; sourceTree = "<group>"; };
+		2994D00519F4DA110080995C /* vbsp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vbsp.h; sourceTree = "<group>"; };
+		2994D00619F4DA110080995C /* vconf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vconf.cpp; sourceTree = "<group>"; };
+		2994D00719F4DA110080995C /* vconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vconf.h; sourceTree = "<group>"; };
+		2994D00819F4DA110080995C /* vdlist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vdlist.cpp; sourceTree = "<group>"; };
+		2994D00919F4DA110080995C /* vdlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vdlist.h; sourceTree = "<group>"; };
+		2994D00A19F4DA110080995C /* vhash.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vhash.cpp; sourceTree = "<group>"; };
+		2994D00B19F4DA110080995C /* vhash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vhash.h; sourceTree = "<group>"; };
+		2994D00C19F4DA110080995C /* vlist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vlist.cpp; sourceTree = "<group>"; };
+		2994D00D19F4DA110080995C /* vlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vlist.h; sourceTree = "<group>"; };
+		2994D00E19F4DA110080995C /* vlogfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vlogfile.cpp; sourceTree = "<group>"; };
+		2994D00F19F4DA110080995C /* vlogfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vlogfile.h; sourceTree = "<group>"; };
+		2994D01019F4DA110080995C /* vwrapper_stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vwrapper_stream.h; sourceTree = "<group>"; };
+		2994D03219F4DABE0080995C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		2994D03419F4DAC70080995C /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		2994D03619F4DAD00080995C /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		2994D03819F4DADA0080995C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		2994D03A19F4DAE50080995C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2994D03C19F4DAF00080995C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2994D03E19F4DAF70080995C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2994D04019F4DAFD0080995C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2994D07019F4DF0A0080995C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		29A97C841A3E76E900C3ECEB /* libOpenThreads.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOpenThreads.a; sourceTree = "<group>"; };
+		29A97C851A3E76E900C3ECEB /* libosg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libosg.a; sourceTree = "<group>"; };
+		29A97C861A3E76E900C3ECEB /* libosgAnimation.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libosgAnimation.a; sourceTree = "<group>"; };
+		29A97C871A3E76E900C3ECEB /* libosgDB.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libosgDB.a; sourceTree = "<group>"; };
+		29A97C881A3E76E900C3ECEB /* libosgdb_freetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libosgdb_freetype.a; sourceTree = "<group>"; };
+		29A97C891A3E76E900C3ECEB /* libosgdb_imageio.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libosgdb_imageio.a; sourceTree = "<group>"; };
+		29A97C8A1A3E76E900C3ECEB /* libosgdb_ive.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libosgdb_ive.a; sourceTree = "<group>"; };
+		29A97C8B1A3E76E900C3ECEB /* libosgdb_obj.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libosgdb_obj.a; sourceTree = "<group>"; };
+		29A97C8C1A3E76E900C3ECEB /* libosgdb_osg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libosgdb_osg.a; sourceTree = "<group>"; };
+		29A97C8D1A3E76E900C3ECEB /* libosgFX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libosgFX.a; sourceTree = "<group>"; };
+		29A97C8E1A3E76E900C3ECEB /* libosgGA.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libosgGA.a; sourceTree = "<group>"; };
+		29A97C8F1A3E76E900C3ECEB /* libosgManipulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libosgManipulator.a; sourceTree = "<group>"; };
+		29A97C901A3E76E900C3ECEB /* libosgParticle.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libosgParticle.a; sourceTree = "<group>"; };
+		29A97C911A3E76E900C3ECEB /* libosgPresentation.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libosgPresentation.a; sourceTree = "<group>"; };
+		29A97C921A3E76E900C3ECEB /* libosgShadow.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libosgShadow.a; sourceTree = "<group>"; };
+		29A97C931A3E76E900C3ECEB /* libosgSim.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libosgSim.a; sourceTree = "<group>"; };
+		29A97C941A3E76E900C3ECEB /* libosgTerrain.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libosgTerrain.a; sourceTree = "<group>"; };
+		29A97C951A3E76E900C3ECEB /* libosgText.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libosgText.a; sourceTree = "<group>"; };
+		29A97C961A3E76E900C3ECEB /* libosgUtil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libosgUtil.a; sourceTree = "<group>"; };
+		29A97C971A3E76E900C3ECEB /* libosgViewer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libosgViewer.a; sourceTree = "<group>"; };
+		29A97C981A3E76E900C3ECEB /* libosgVolume.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libosgVolume.a; sourceTree = "<group>"; };
+		29A97C991A3E76E900C3ECEB /* libosgWidget.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libosgWidget.a; sourceTree = "<group>"; };
+		29B987E219F4E524007DDB16 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		29B987E319F4E524007DDB16 /* MainViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainViewController.mm; sourceTree = "<group>"; };
+		29B987E519F4E56B007DDB16 /* ShowOsgViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowOsgViewController.h; sourceTree = "<group>"; };
+		29B987E619F4E56B007DDB16 /* ShowOsgViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ShowOsgViewController.mm; sourceTree = "<group>"; };
+		A57FE9681BE060F400AF0013 /* ZP-822107_A1.i3d */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ZP-822107_A1.i3d"; path = "../../../../ZP-822107_A1.i3d"; sourceTree = "<group>"; };
+		A57FE96A1BE0617800AF0013 /* I3D_XML.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = I3D_XML.mm; sourceTree = "<group>"; };
+		A57FE96B1BE0617800AF0013 /* I3D_XML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = I3D_XML.h; sourceTree = "<group>"; };
+		A57FE9811BE0A69000AF0013 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		A59D98861BE6F9E600C69FEA /* osgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = osgView.h; sourceTree = "<group>"; };
+		A59D98871BE6F9E600C69FEA /* osgView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = osgView.mm; sourceTree = "<group>"; };
+		A5A72C9E1BDF75C7002CCC44 /* skydome.ive */ = {isa = PBXFileReference; lastKnownFileType = file; path = skydome.ive; sourceTree = "<group>"; };
+		A5A72CA01BDF770D002CCC44 /* teapot.IVE */ = {isa = PBXFileReference; lastKnownFileType = file; path = teapot.IVE; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2994CF9E19F4D87C0080995C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5D8E5571BE3045B0088FCAA /* libosgDB.a in Frameworks */,
+				A57FE9821BE0A69000AF0013 /* libz.dylib in Frameworks */,
+				29A97CAF1A3E76E900C3ECEB /* libosgWidget.a in Frameworks */,
+				29A97CAC1A3E76E900C3ECEB /* libosgUtil.a in Frameworks */,
+				29A97CA41A3E76E900C3ECEB /* libosgGA.a in Frameworks */,
+				29A97C9E1A3E76E900C3ECEB /* libosgdb_freetype.a in Frameworks */,
+				29A97CA81A3E76E900C3ECEB /* libosgShadow.a in Frameworks */,
+				2994D04119F4DAFD0080995C /* Foundation.framework in Frameworks */,
+				29A97CAD1A3E76E900C3ECEB /* libosgViewer.a in Frameworks */,
+				29A97CAA1A3E76E900C3ECEB /* libosgTerrain.a in Frameworks */,
+				2994D03F19F4DAF70080995C /* UIKit.framework in Frameworks */,
+				29A97C9F1A3E76E900C3ECEB /* libosgdb_imageio.a in Frameworks */,
+				2994D03D19F4DAF00080995C /* QuartzCore.framework in Frameworks */,
+				29A97CA61A3E76E900C3ECEB /* libosgParticle.a in Frameworks */,
+				29A97CA01A3E76E900C3ECEB /* libosgdb_ive.a in Frameworks */,
+				29A97CA51A3E76E900C3ECEB /* libosgManipulator.a in Frameworks */,
+				2994D03B19F4DAE50080995C /* CoreGraphics.framework in Frameworks */,
+				2994D03919F4DADA0080995C /* ImageIO.framework in Frameworks */,
+				2994D03719F4DAD00080995C /* libz.1.2.5.dylib in Frameworks */,
+				29A97C9B1A3E76E900C3ECEB /* libosg.a in Frameworks */,
+				29A97CA21A3E76E900C3ECEB /* libosgdb_osg.a in Frameworks */,
+				29A97CAE1A3E76E900C3ECEB /* libosgVolume.a in Frameworks */,
+				29A97CA31A3E76E900C3ECEB /* libosgFX.a in Frameworks */,
+				29A97CA91A3E76E900C3ECEB /* libosgSim.a in Frameworks */,
+				2994D03519F4DAC70080995C /* GLKit.framework in Frameworks */,
+				29A97CAB1A3E76E900C3ECEB /* libosgText.a in Frameworks */,
+				29A97C9C1A3E76E900C3ECEB /* libosgAnimation.a in Frameworks */,
+				29A97CA11A3E76E900C3ECEB /* libosgdb_obj.a in Frameworks */,
+				29A97CA71A3E76E900C3ECEB /* libosgPresentation.a in Frameworks */,
+				29A97C9A1A3E76E900C3ECEB /* libOpenThreads.a in Frameworks */,
+				2994D03319F4DABE0080995C /* OpenGLES.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2994CFB719F4D87C0080995C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2993914919F5F1DF002D2FAD /* osg */ = {
+			isa = PBXGroup;
+			children = (
+				2993914A19F5F1DF002D2FAD /* OsgAndroidNotifyHandler.cpp */,
+				2993914B19F5F1DF002D2FAD /* OsgAndroidNotifyHandler.hpp */,
+				2993914C19F5F1DF002D2FAD /* OsgConverter.mm */,
+				2993914D19F5F1DF002D2FAD /* OsgConverter.h */,
+				2993914E19F5F1DF002D2FAD /* OsgMainApp.cpp */,
+				2993914F19F5F1DF002D2FAD /* OsgMainApp.hpp */,
+				2993915019F5F1DF002D2FAD /* OSGOpcodeHandler.cpp */,
+				2993915119F5F1DF002D2FAD /* OSGOpcodeHandler.h */,
+				2993915219F5F1DF002D2FAD /* OSGOpcodeShell.cpp */,
+				2993915319F5F1DF002D2FAD /* OSGOpcodeShell.h */,
+				2993915419F5F1DF002D2FAD /* Osgpick.cpp */,
+				2993915519F5F1DF002D2FAD /* Osgpick.h */,
+				2993915619F5F1DF002D2FAD /* OsgTouchManipulator.cpp */,
+				2993915719F5F1DF002D2FAD /* OsgTouchManipulator.h */,
+			);
+			name = osg;
+			path = inteView/osg;
+			sourceTree = SOURCE_ROOT;
+		};
+		2994CF9819F4D87C0080995C = {
+			isa = PBXGroup;
+			children = (
+				2994CFA319F4D87C0080995C /* inteView */,
+				2994CFBD19F4D87C0080995C /* inteViewTests */,
+				2994CFA219F4D87C0080995C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2994CFA219F4D87C0080995C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2994CFA119F4D87C0080995C /* inteView.app */,
+				2994CFBA19F4D87C0080995C /* inteViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2994CFA319F4D87C0080995C /* inteView */ = {
+			isa = PBXGroup;
+			children = (
+				A57FE96D1BE0A47F00AF0013 /* Zip */,
+				2993914919F5F1DF002D2FAD /* osg */,
+				2994CFDB19F4DA110080995C /* parseXML */,
+				2994CFE219F4DA110080995C /* stream_common */,
+				2994CFFC19F4DA110080995C /* utility */,
+				2994CFA819F4D87C0080995C /* AppDelegate.h */,
+				2994CFA919F4D87C0080995C /* AppDelegate.m */,
+				2994CFD919F4DA110080995C /* osgNativeLib.h */,
+				2994CFDA19F4DA110080995C /* osgNativeLib.mm */,
+				29B987E219F4E524007DDB16 /* MainViewController.h */,
+				29B987E319F4E524007DDB16 /* MainViewController.mm */,
+				29B987E519F4E56B007DDB16 /* ShowOsgViewController.h */,
+				29B987E619F4E56B007DDB16 /* ShowOsgViewController.mm */,
+				A59D98861BE6F9E600C69FEA /* osgView.h */,
+				A59D98871BE6F9E600C69FEA /* osgView.mm */,
+				A5A72C9E1BDF75C7002CCC44 /* skydome.ive */,
+				A5A72CA01BDF770D002CCC44 /* teapot.IVE */,
+				A57FE9681BE060F400AF0013 /* ZP-822107_A1.i3d */,
+				2994CFB119F4D87C0080995C /* Images.xcassets */,
+				2993918C19F64557002D2FAD /* login_bg@2x.png */,
+				2994CFB319F4D87C0080995C /* LaunchScreen.xib */,
+				2994CFA419F4D87C0080995C /* Supporting Files */,
+			);
+			path = inteView;
+			sourceTree = "<group>";
+		};
+		2994CFA419F4D87C0080995C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A57FE9811BE0A69000AF0013 /* libz.dylib */,
+				29A97C831A3E76E900C3ECEB /* lib-osg */,
+				2994D07019F4DF0A0080995C /* Default-568h@2x.png */,
+				2994D04019F4DAFD0080995C /* Foundation.framework */,
+				2994D03E19F4DAF70080995C /* UIKit.framework */,
+				2994D03C19F4DAF00080995C /* QuartzCore.framework */,
+				2994D03A19F4DAE50080995C /* CoreGraphics.framework */,
+				2994D03819F4DADA0080995C /* ImageIO.framework */,
+				2994D03619F4DAD00080995C /* libz.1.2.5.dylib */,
+				2994D03419F4DAC70080995C /* GLKit.framework */,
+				2994D03219F4DABE0080995C /* OpenGLES.framework */,
+				2994CFA519F4D87C0080995C /* Info.plist */,
+				2994CFA619F4D87C0080995C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2994CFBD19F4D87C0080995C /* inteViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				2994CFC019F4D87C0080995C /* inteViewTests.m */,
+				2994CFBE19F4D87C0080995C /* Supporting Files */,
+			);
+			path = inteViewTests;
+			sourceTree = "<group>";
+		};
+		2994CFBE19F4D87C0080995C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2994CFBF19F4D87C0080995C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2994CFDB19F4DA110080995C /* parseXML */ = {
+			isa = PBXGroup;
+			children = (
+				2994CFDC19F4DA110080995C /* IVA_XML.cpp */,
+				2994CFDD19F4DA110080995C /* IVA_XML.h */,
+				A57FE96A1BE0617800AF0013 /* I3D_XML.mm */,
+				A57FE96B1BE0617800AF0013 /* I3D_XML.h */,
+				2994CFDE19F4DA110080995C /* SlimXml.cpp */,
+				2994CFDF19F4DA110080995C /* SlimXml.h */,
+				2994CFE019F4DA110080995C /* XmlSchema.cpp */,
+				2994CFE119F4DA110080995C /* XmlSchema.h */,
+			);
+			path = parseXML;
+			sourceTree = "<group>";
+		};
+		2994CFE219F4DA110080995C /* stream_common */ = {
+			isa = PBXGroup;
+			children = (
+				2994CFE319F4DA110080995C /* BAscii.cpp */,
+				2994CFE419F4DA110080995C /* BByteStream.h */,
+				2994CFE519F4DA110080995C /* BCompress.cpp */,
+				2994CFE619F4DA110080995C /* BCompress.h */,
+				2994CFE719F4DA110080995C /* BCompressData.cpp */,
+				2994CFE819F4DA110080995C /* BEdgeBreaker.h */,
+				2994CFE919F4DA110080995C /* BEdgeBreakerCommon.cpp */,
+				2994CFEA19F4DA110080995C /* BEdgeBreakerCompress.cpp */,
+				2994CFEB19F4DA110080995C /* BEdgeBreakerDecompress.cpp */,
+				2994CFEC19F4DA110080995C /* BInternal.h */,
+				2994CFED19F4DA110080995C /* BOpcodeHandler.cpp */,
+				2994CFEE19F4DA110080995C /* BOpcodeHandler.h */,
+				2994CFEF19F4DA110080995C /* BOpcodeShell.cpp */,
+				2994CFF019F4DA110080995C /* BOpcodeShell.h */,
+				2994CFF119F4DA110080995C /* BOpcodeShellAscii.cpp */,
+				2994CFF219F4DA110080995C /* BPointCloud.cpp */,
+				2994CFF319F4DA110080995C /* BPointCloud.h */,
+				2994CFF419F4DA110080995C /* BPolyhedron.cpp */,
+				2994CFF519F4DA110080995C /* BPolyhedron.h */,
+				2994CFF619F4DA110080995C /* BPolyhedronAscii.cpp */,
+				2994CFF719F4DA110080995C /* BPolyPoly.cpp */,
+				2994CFF819F4DA110080995C /* BPolyPoly.h */,
+				2994CFF919F4DA110080995C /* BStream.h */,
+				2994CFFA19F4DA110080995C /* BStreamFileToolkit.cpp */,
+				2994CFFB19F4DA110080995C /* BStreamFileToolkit.h */,
+			);
+			path = stream_common;
+			sourceTree = "<group>";
+		};
+		2994CFFC19F4DA110080995C /* utility */ = {
+			isa = PBXGroup;
+			children = (
+				2994CFFD19F4DA110080995C /* cache_memory_object.cpp */,
+				2994CFFE19F4DA110080995C /* cache_memory_object.h */,
+				2994CFFF19F4DA110080995C /* hqsort.h */,
+				2994D00019F4DA110080995C /* tempfile_utils.cpp */,
+				2994D00119F4DA110080995C /* tempfile_utils.h */,
+				2994D00219F4DA110080995C /* utf_utils.cpp */,
+				2994D00319F4DA110080995C /* utf_utils.h */,
+				2994D00419F4DA110080995C /* varray.h */,
+				2994D00519F4DA110080995C /* vbsp.h */,
+				2994D00619F4DA110080995C /* vconf.cpp */,
+				2994D00719F4DA110080995C /* vconf.h */,
+				2994D00819F4DA110080995C /* vdlist.cpp */,
+				2994D00919F4DA110080995C /* vdlist.h */,
+				2994D00A19F4DA110080995C /* vhash.cpp */,
+				2994D00B19F4DA110080995C /* vhash.h */,
+				2994D00C19F4DA110080995C /* vlist.cpp */,
+				2994D00D19F4DA110080995C /* vlist.h */,
+				2994D00E19F4DA110080995C /* vlogfile.cpp */,
+				2994D00F19F4DA110080995C /* vlogfile.h */,
+				2994D01019F4DA110080995C /* vwrapper_stream.h */,
+			);
+			path = utility;
+			sourceTree = "<group>";
+		};
+		29A97C831A3E76E900C3ECEB /* lib-osg */ = {
+			isa = PBXGroup;
+			children = (
+				29A97C841A3E76E900C3ECEB /* libOpenThreads.a */,
+				29A97C851A3E76E900C3ECEB /* libosg.a */,
+				29A97C861A3E76E900C3ECEB /* libosgAnimation.a */,
+				29A97C871A3E76E900C3ECEB /* libosgDB.a */,
+				29A97C881A3E76E900C3ECEB /* libosgdb_freetype.a */,
+				29A97C891A3E76E900C3ECEB /* libosgdb_imageio.a */,
+				29A97C8A1A3E76E900C3ECEB /* libosgdb_ive.a */,
+				29A97C8B1A3E76E900C3ECEB /* libosgdb_obj.a */,
+				29A97C8C1A3E76E900C3ECEB /* libosgdb_osg.a */,
+				29A97C8D1A3E76E900C3ECEB /* libosgFX.a */,
+				29A97C8E1A3E76E900C3ECEB /* libosgGA.a */,
+				29A97C8F1A3E76E900C3ECEB /* libosgManipulator.a */,
+				29A97C901A3E76E900C3ECEB /* libosgParticle.a */,
+				29A97C911A3E76E900C3ECEB /* libosgPresentation.a */,
+				29A97C921A3E76E900C3ECEB /* libosgShadow.a */,
+				29A97C931A3E76E900C3ECEB /* libosgSim.a */,
+				29A97C941A3E76E900C3ECEB /* libosgTerrain.a */,
+				29A97C951A3E76E900C3ECEB /* libosgText.a */,
+				29A97C961A3E76E900C3ECEB /* libosgUtil.a */,
+				29A97C971A3E76E900C3ECEB /* libosgViewer.a */,
+				29A97C981A3E76E900C3ECEB /* libosgVolume.a */,
+				29A97C991A3E76E900C3ECEB /* libosgWidget.a */,
+			);
+			path = "lib-osg";
+			sourceTree = SOURCE_ROOT;
+		};
+		A57FE96D1BE0A47F00AF0013 /* Zip */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Zip;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2994CFA019F4D87C0080995C /* inteView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2994CFC419F4D87C0080995C /* Build configuration list for PBXNativeTarget "inteView" */;
+			buildPhases = (
+				2994CF9D19F4D87C0080995C /* Sources */,
+				2994CF9E19F4D87C0080995C /* Frameworks */,
+				2994CF9F19F4D87C0080995C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = inteView;
+			productName = inteView;
+			productReference = 2994CFA119F4D87C0080995C /* inteView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2994CFB919F4D87C0080995C /* inteViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2994CFC719F4D87C0080995C /* Build configuration list for PBXNativeTarget "inteViewTests" */;
+			buildPhases = (
+				2994CFB619F4D87C0080995C /* Sources */,
+				2994CFB719F4D87C0080995C /* Frameworks */,
+				2994CFB819F4D87C0080995C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2994CFBC19F4D87C0080995C /* PBXTargetDependency */,
+			);
+			name = inteViewTests;
+			productName = inteViewTests;
+			productReference = 2994CFBA19F4D87C0080995C /* inteViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2994CF9919F4D87C0080995C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = whtysf;
+				TargetAttributes = {
+					2994CFA019F4D87C0080995C = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					2994CFB919F4D87C0080995C = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 2994CFA019F4D87C0080995C;
+					};
+				};
+			};
+			buildConfigurationList = 2994CF9C19F4D87C0080995C /* Build configuration list for PBXProject "inteView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2994CF9819F4D87C0080995C;
+			productRefGroup = 2994CFA219F4D87C0080995C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2994CFA019F4D87C0080995C /* inteView */,
+				2994CFB919F4D87C0080995C /* inteViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2994CF9F19F4D87C0080995C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A57FE9691BE060F400AF0013 /* ZP-822107_A1.i3d in Resources */,
+				2994D07119F4DF0A0080995C /* Default-568h@2x.png in Resources */,
+				2993918D19F64557002D2FAD /* login_bg@2x.png in Resources */,
+				A5A72C9F1BDF75C7002CCC44 /* skydome.ive in Resources */,
+				2994CFB519F4D87C0080995C /* LaunchScreen.xib in Resources */,
+				2994CFB219F4D87C0080995C /* Images.xcassets in Resources */,
+				A5A72CA11BDF770D002CCC44 /* teapot.IVE in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2994CFB819F4D87C0080995C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2994CF9D19F4D87C0080995C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2994D02A19F4DA110080995C /* cache_memory_object.cpp in Sources */,
+				29B987E419F4E524007DDB16 /* MainViewController.mm in Sources */,
+				2993915E19F5F1DF002D2FAD /* OsgTouchManipulator.cpp in Sources */,
+				2994D01B19F4DA110080995C /* XmlSchema.cpp in Sources */,
+				2994D02F19F4DA110080995C /* vhash.cpp in Sources */,
+				2994D01F19F4DA110080995C /* BEdgeBreakerCommon.cpp in Sources */,
+				2994D01E19F4DA110080995C /* BCompressData.cpp in Sources */,
+				2994D02319F4DA110080995C /* BOpcodeShell.cpp in Sources */,
+				2994D01919F4DA110080995C /* IVA_XML.cpp in Sources */,
+				2994D02819F4DA110080995C /* BPolyPoly.cpp in Sources */,
+				2993915C19F5F1DF002D2FAD /* OSGOpcodeShell.cpp in Sources */,
+				2994D02119F4DA110080995C /* BEdgeBreakerDecompress.cpp in Sources */,
+				2993915A19F5F1DF002D2FAD /* OsgMainApp.cpp in Sources */,
+				2994D02619F4DA110080995C /* BPolyhedron.cpp in Sources */,
+				2994D03119F4DA110080995C /* vlogfile.cpp in Sources */,
+				2994D01C19F4DA110080995C /* BAscii.cpp in Sources */,
+				2994D02219F4DA110080995C /* BOpcodeHandler.cpp in Sources */,
+				2994D02919F4DA110080995C /* BStreamFileToolkit.cpp in Sources */,
+				A57FE96C1BE0617800AF0013 /* I3D_XML.mm in Sources */,
+				2994D02719F4DA110080995C /* BPolyhedronAscii.cpp in Sources */,
+				2994CFAA19F4D87C0080995C /* AppDelegate.m in Sources */,
+				2993915819F5F1DF002D2FAD /* OsgAndroidNotifyHandler.cpp in Sources */,
+				A59D98881BE6F9E600C69FEA /* osgView.mm in Sources */,
+				2994D02B19F4DA110080995C /* tempfile_utils.cpp in Sources */,
+				2994D02D19F4DA110080995C /* vconf.cpp in Sources */,
+				2994D01819F4DA110080995C /* osgNativeLib.mm in Sources */,
+				2994D02419F4DA110080995C /* BOpcodeShellAscii.cpp in Sources */,
+				2993915B19F5F1DF002D2FAD /* OSGOpcodeHandler.cpp in Sources */,
+				2994D02019F4DA110080995C /* BEdgeBreakerCompress.cpp in Sources */,
+				29B987E719F4E56B007DDB16 /* ShowOsgViewController.mm in Sources */,
+				2994D02519F4DA110080995C /* BPointCloud.cpp in Sources */,
+				2994D01D19F4DA110080995C /* BCompress.cpp in Sources */,
+				2994D01A19F4DA110080995C /* SlimXml.cpp in Sources */,
+				2993915919F5F1DF002D2FAD /* OsgConverter.mm in Sources */,
+				2994D02C19F4DA110080995C /* utf_utils.cpp in Sources */,
+				2994D03019F4DA110080995C /* vlist.cpp in Sources */,
+				2994D02E19F4DA110080995C /* vdlist.cpp in Sources */,
+				2994CFA719F4D87C0080995C /* main.m in Sources */,
+				2993915D19F5F1DF002D2FAD /* Osgpick.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2994CFB619F4D87C0080995C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2994CFC119F4D87C0080995C /* inteViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2994CFBC19F4D87C0080995C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2994CFA019F4D87C0080995C /* inteView */;
+			targetProxy = 2994CFBB19F4D87C0080995C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2994CFB319F4D87C0080995C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2994CFB419F4D87C0080995C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2994CFC219F4D87C0080995C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2994CFC319F4D87C0080995C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2994CFC519F4D87C0080995C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				ENABLE_NS_ASSERTIONS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_INPUT_FILETYPE = automatic;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../include\"",
+					"\"$(SRCROOT)/config\"",
+				);
+				INFOPLIST_FILE = inteView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/lib-osg";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = NO;
+				VALID_ARCHS = "armv7 armv7s arm64";
+			};
+			name = Debug;
+		};
+		2994CFC619F4D87C0080995C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				ENABLE_NS_ASSERTIONS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INPUT_FILETYPE = automatic;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/../include\"",
+					"\"$(SRCROOT)/config\"",
+				);
+				INFOPLIST_FILE = inteView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/lib-osg";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = NO;
+				VALID_ARCHS = "armv7 armv7s arm64";
+			};
+			name = Release;
+		};
+		2994CFC819F4D87C0080995C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = inteViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/inteView.app/inteView";
+			};
+			name = Debug;
+		};
+		2994CFC919F4D87C0080995C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = inteViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/inteView.app/inteView";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2994CF9C19F4D87C0080995C /* Build configuration list for PBXProject "inteView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2994CFC219F4D87C0080995C /* Debug */,
+				2994CFC319F4D87C0080995C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2994CFC419F4D87C0080995C /* Build configuration list for PBXNativeTarget "inteView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2994CFC519F4D87C0080995C /* Debug */,
+				2994CFC619F4D87C0080995C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2994CFC719F4D87C0080995C /* Build configuration list for PBXNativeTarget "inteViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2994CFC819F4D87C0080995C /* Debug */,
+				2994CFC919F4D87C0080995C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2994CF9919F4D87C0080995C /* Project object */;
+}

@@ -1,0 +1,82 @@
+#pragma once
+
+#include "osgDB/ReadFile"
+#include "osgViewer/Viewer"
+#include "osg/Node"
+#include "osg/Geode"
+#include "osg/Geometry"
+#include "osgDB/WriteFile"
+#include <osgUtil/SmoothingVisitor>
+#include "BStream.h"
+#include <string>
+#include <string.h>
+#include <stdio.h>
+#include <zlib.h>
+#define FILEBUFFERSIZE 20480
+
+#include "IVA_XML.h"
+
+using namespace slim;
+using namespace IVA_XML;
+
+#define SHADER_COMPAT \
+"#ifndef GL_ES\n" \
+"#if (__VERSION__ <= 110)\n" \
+"#define lowp\n" \
+"#define mediump\n" \
+"#define highp\n" \
+"#endif\n" \
+"#endif\n"
+
+static char gVertexShader[] = {
+	"const vec3 LightPosition = vec3(0.0, 0.0, 10.0);\n"
+	"const float specularContribution = 0.3;\n"
+	"const float diffuseContribution  = (1.0 - specularContribution);\n"
+	"varying float LightIntensity;\n"
+	"varying vec2  MCposition;\n"
+
+	"void main(void)\n"
+	"{\n"
+	"	vec4 ecPosition = gl_ModelViewMatrix * gl_Vertex;\n"
+	"	vec3 tnorm      = normalize(gl_NormalMatrix * gl_Normal);\n"
+	"	vec3 lightVec   = normalize(LightPosition - vec3 (ecPosition));\n"
+	"	vec3 reflectVec = reflect(-lightVec, tnorm);\n"
+	"	vec3 viewVec    = normalize(vec3 (-ecPosition));\n"
+	"	float spec      = max(dot(reflectVec, viewVec), 0.0);\n"
+	"	spec            = pow(spec, 16.0);\n"
+	"	LightIntensity  = diffuseContribution * max(dot(lightVec, tnorm), 0.0) +specularContribution * spec;\n"
+	"	MCposition      = gl_Vertex.xz;\n"
+	"	gl_Position     = gl_ModelViewProjectionMatrix * gl_Vertex;\n"
+	"}\n"
+};
+
+class OsgConverter
+{
+	//CString m_strFileName;
+private:
+//    static std::string outfilepath;
+//    static std::string tempfilepath;
+//    static std::string ivaname;
+public:
+	OsgConverter(void);
+	~OsgConverter(void);
+    
+	osg::ref_ptr<osg::StateSet> m_StateSet;
+ 
+    static osg::ref_ptr<osg::Group> readFile(std::string cfileName, std::vector<std::string> filedocument);
+	static bool readAsmFile(std::string cfileName,osg::ref_ptr<osg::MatrixTransform>& parent);
+	static bool readIvpFile(std::string cfileName,osg::ref_ptr<osg::MatrixTransform>& parent);
+	static char* unZlib(const char* filename);
+	static void readFile(std::string cfileName,std::vector<child>& vload);
+	static TK_Status readIvpFile(std::string cfileName);
+	void AddShell(int iPointCount,float *pPoints,float *pNormals,int iFaceCount,int *iFaceIndex,double *face_rgb);
+	void Save();
+	static void OSG_Open_Segment(const char* name);
+	static osg::ref_ptr<osg::Group> getRoot();
+	static void OSG_Insert_Shell(int iPointCount,float *pPoints,float *pNormals,int iFaceCount,int *iFaceIndex,double *face_rgb=NULL);
+	static void SetRGB (float const * rgb);
+	static float* GetRGB();
+	static char* ANSI2UTF8(char* cstr);
+    
+   
+};
