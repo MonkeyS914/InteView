@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C88A470F-ABF5-4F7E-B4CA-B0CB380A1F39</string>
+	<key>IDESourceControlProjectName</key>
+	<string>inteView</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>77B57FCEC3E11AA8C42118336262D5FBA1D417C9</key>
+		<string>https://github.com/MonkeyS914/InteView.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>inteView.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>77B57FCEC3E11AA8C42118336262D5FBA1D417C9</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/MonkeyS914/InteView.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>77B57FCEC3E11AA8C42118336262D5FBA1D417C9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>77B57FCEC3E11AA8C42118336262D5FBA1D417C9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>InteView</string>
+		</dict>
+	</array>
+</dict>
+</plist>

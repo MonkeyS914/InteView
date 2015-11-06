@@ -77,7 +77,7 @@
 		29A97CAE1A3E76E900C3ECEB /* libosgVolume.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A97C981A3E76E900C3ECEB /* libosgVolume.a */; };
 		29A97CAF1A3E76E900C3ECEB /* libosgWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A97C991A3E76E900C3ECEB /* libosgWidget.a */; };
 		29B987E419F4E524007DDB16 /* MainViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29B987E319F4E524007DDB16 /* MainViewController.mm */; };
-		29B987E719F4E56B007DDB16 /* ShowOsgViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29B987E619F4E56B007DDB16 /* ShowOsgViewController.mm */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		29B987E719F4E56B007DDB16 /* ShowOsgViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 29B987E619F4E56B007DDB16 /* ShowOsgViewController.mm */; };
 		A57FE9691BE060F400AF0013 /* ZP-822107_A1.i3d in Resources */ = {isa = PBXBuildFile; fileRef = A57FE9681BE060F400AF0013 /* ZP-822107_A1.i3d */; };
 		A57FE96C1BE0617800AF0013 /* I3D_XML.mm in Sources */ = {isa = PBXBuildFile; fileRef = A57FE96A1BE0617800AF0013 /* I3D_XML.mm */; };
 		A57FE9821BE0A69000AF0013 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A57FE9811BE0A69000AF0013 /* libz.dylib */; };

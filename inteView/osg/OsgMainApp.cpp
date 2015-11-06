@@ -276,9 +276,9 @@ void OsgMainApp::doubleTouchEvent(int phase,int id0,float x0,float y0,int id1,fl
 
 void OsgMainApp::releaseView() {
     if (_viewer != NULL) {
-        _viewer->done();
+        _viewer -> done();
         _viewer = NULL;
         _root = NULL;
-        _window=NULL;
+        _window = NULL;
     }
 }

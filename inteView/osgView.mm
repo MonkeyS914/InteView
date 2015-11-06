@@ -25,11 +25,7 @@
     
     if([exestr isEqualToString:@"i3d"])
     {
-        if(_step == 0)
-        {
-//            _filePath = [_filePath stringByDeletingPathExtension];
-//            _filePath = [NSString stringWithFormat:@"%@.iva",_filePath];
-        }
+        
     }
     else
     {
@@ -67,9 +63,18 @@
     
 }
 
+- (void)releaseObject{
+    
+    [_displayLink removeFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+    _displayLink = nil;
+    windata = NULL;
+//    clearContents();
+    clearOsgView();
+}
+
 - (void)dealloc {
 
-    [_displayLink removeFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+//    [_displayLink removeFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
     _displayLink = nil;
     windata = NULL;
     clearOsgView();

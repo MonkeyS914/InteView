@@ -235,6 +235,8 @@
         [menuBt addTarget:self action:@selector(alertViewType:) forControlEvents:UIControlEventTouchUpInside];
         menuBt.tag = i+1;
         [backView addSubview:menuBt];
+        
+        [menuBt release];
 
     }
 
@@ -294,9 +296,9 @@
     
     [anotherTimer invalidate];
     
-    _displayLink = nil;
-    windata = NULL;
-    clearOsgView();
+    [bgView releaseObject];
+    
+    [bgView release];
     
     [self initOsgWindow:step];
     
@@ -324,13 +326,17 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
+    [bgView releaseObject];
+    
+    [bgView release];
 }
 
 - (void)dealloc {
     _displayLink = nil;
-//    windata = NULL;
+//    bgView->windata = NULL;
     clearOsgView();
-//    [super dealloc];
+    [super dealloc];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

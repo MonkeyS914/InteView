@@ -24,6 +24,8 @@
 
 - (void) initOsgWindow;
 
+- (void) releaseObject;
+
 @property (nonatomic, assign) int step;
 @property (nonatomic, retain) NSString *filePath;
 @property (nonatomic, retain) CADisplayLink* displayLink;
