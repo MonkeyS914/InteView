@@ -114,7 +114,34 @@ XmlNode* XmlNode::findChild(const Char* name) const
 	}
 	return NULL;
 }
+  
+///////////////////////////////////////////////////////////////////////////////////////////////////
+XmlNode* XmlNode::findFirstChild(NodeIterator& iter) const
+{
+    iter = m_children.begin();
+    if (iter != m_children.end()) {
+        XmlNode* child = *iter;
+        assert(child != NULL);
+        return child;
+    }
+    return NULL;
+}
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+XmlNode* XmlNode::findNextChild(NodeIterator& iter) const
+{
+    if (iter != m_children.end())
+    {
+        while (++iter != m_children.end())
+        {
+            XmlNode* child = *iter;
+            assert(child != NULL);
+            return child;
+        }
+    }
+    return NULL;
+}
+    
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 XmlNode* XmlNode::findFirstChild(const Char* name, NodeIterator& iter) const
 {

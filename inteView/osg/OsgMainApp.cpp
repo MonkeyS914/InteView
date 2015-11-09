@@ -117,12 +117,12 @@ void OsgMainApp::initOsgWindow(int x,int y,int width,int height, osg::ref_ptr<os
 
 }
 
-void OsgMainApp::loadModelFile( int step )
+void OsgMainApp::loadModelFile( int step, int isFromPic )
 {
     
     if(vModelsToLoad1.size()==0) return;
     
-    _root = OsgConverter::readFile(vModelsToLoad1[0],step, ivavector);
+    _root = OsgConverter::readFile(vModelsToLoad1[0],step,isFromPic, ivavector);
   
     Model newModel;
     newModel.filename = vModelsToLoad1[0];
@@ -150,9 +150,9 @@ void OsgMainApp::loadModelFile( int step )
 }
 
 //Draw
-void OsgMainApp::draw( int step ){
+void OsgMainApp::draw( int step,int isFromPic ){
     
-    loadModelFile( step );
+    loadModelFile( step, isFromPic);
     deleteModels();
     if (_viewer != NULL) {
         _viewer->frame();

@@ -136,7 +136,7 @@ public:
     void getciphrtxFilePath(std::string ciphrtextph, std::string tmptxph, std::string  filename);
     
     //Draw
-    void draw( int step );
+    void draw( int step,int isFromPic );
     //Events
     void mouseButtonPressEvent(float x,float y,int button);
     void mouseButtonReleaseEvent(float x,float y,int button);
@@ -157,7 +157,7 @@ public:
 
     osg::ref_ptr<osg::Node> createShape();
     void loadIvpModel();
-    void loadModelFile( int step );
+    void loadModelFile( int step ,int isFromPic);
     void NavigationButtonDown(int viewtype);
 
     //¥•øÿ

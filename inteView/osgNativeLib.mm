@@ -20,8 +20,8 @@ void initOsgNav(int width, int height, osg::ref_ptr<osg::Referenced>& windata){
     mainApp.initOsgWindow(0, 0, width, height, windata);
 }
 
-void osgDraw( int step ){
-    mainApp.draw( step );
+void osgDraw( int step,int isFromPic ){
+    mainApp.draw( step, isFromPic );
 }
 
 void clearContents(){

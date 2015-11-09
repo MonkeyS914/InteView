@@ -15,7 +15,7 @@ void loadObject(NSString *address);
 void initOsgSimNav();
 void initOsgNav(int width, int height, osg::ref_ptr<osg::Referenced>& graphicsContext);
 
-void osgDraw( int step );
+void osgDraw( int step, int isFromPic );
 
 void clearContents();
 

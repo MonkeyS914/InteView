@@ -69,12 +69,38 @@ namespace I3D_XML
         std::vector<step> m_step;
     };
     
-//    struct View{
-//        
-//        void read( const slim::XmlNode* node);
-//        void write( slim::XmlNode* node) const;
-//        
-//    };
+    struct partView{
+        
+        void read( const slim::XmlNode* node);
+        void write( slim::XmlNode* node) const;
+        
+        std::string matrixStr;
+        std::string matrixKey;
+        std::vector<float> matrix;
+    };
+    
+    struct stepView{
+        
+        void read( const slim::XmlNode* node);
+        void write( slim::XmlNode* node) const;
+        
+        std::string fileName;
+        std::string ModelData;
+        std::string stepViewName;
+        
+        partView m_partView;
+        
+    };
+    
+    struct View{
+        
+        void read( const slim::XmlNode* node);
+        void write( slim::XmlNode* node) const;
+        
+        stepView m_stepView;
+        std::string viewName;
+        
+    };
     
     struct fileNode
     {
@@ -117,6 +143,7 @@ namespace I3D_XML
         
         asmProcess m_asmProcess;
         modelSpace m_modelSpace;
+        View m_view;
         
         std::string RootName;
 //        View m_view;

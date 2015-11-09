@@ -65,11 +65,11 @@ public:
     
 	osg::ref_ptr<osg::StateSet> m_StateSet;
  
-    static osg::ref_ptr<osg::Group> readFile(std::string cfileName, int step ,std::vector<std::string> filedocument);
+    static osg::ref_ptr<osg::Group> readFile(std::string cfileName, int step, int isFromPic, std::vector<std::string> filedocument);
     
 	static bool readAsmFile(std::string cfileName,osg::ref_ptr<osg::MatrixTransform>& parent);
 	static bool readIvpFile(std::string cfileName,osg::ref_ptr<osg::MatrixTransform>& parent);
-    static bool readI3dFile(std::string cfileName,int step, osg::ref_ptr<osg::MatrixTransform>& parent);
+    static bool readI3dFile(std::string cfileName,int step, int isFromPic, osg::ref_ptr<osg::MatrixTransform>& parent);
     
     static std::string getMenuClass();
     

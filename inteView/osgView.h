@@ -27,6 +27,7 @@
 - (void) releaseObject;
 
 @property (nonatomic, assign) int step;
+@property (nonatomic, assign) int isFromPic;
 @property (nonatomic, retain) NSString *filePath;
 @property (nonatomic, retain) CADisplayLink* displayLink;
 @property (nonatomic, assign) id <menuClassDelegate> delegate;

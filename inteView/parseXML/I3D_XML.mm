@@ -57,6 +57,16 @@ namespace I3D_XML
             m_modelSpace.read(childNode);
             
         }
+        
+        //读取根节点下面的View，与asminfo并行
+        childNode = node->findChild( "View" );
+        if ( childNode != NULL )
+        {
+            m_view.viewName = RootName;
+            
+            m_view.read(childNode);
+            
+        }
     }
     
     void Root3D::write( XmlNode* node ) const
@@ -93,6 +103,144 @@ namespace I3D_XML
     
     void modelSpace::write(slim::XmlNode *node) const{
         
+    }
+    
+    //View 储存图片的数据
+    void View::read(const XmlNode *node){
+        assert( node != NULL );
+        
+        NodeIterator iter;
+        const XmlNode* childNode = NULL;
+//        const XmlAttribute* attribute = NULL;
+        
+        childNode = node->findFirstChild(iter);
+        
+        while ( childNode != NULL )
+        {
+            m_stepView.stepViewName = viewName;
+            m_stepView.read(childNode);
+            //读取下一个step节点的信息
+            childNode = node->findNextChild(iter);
+            
+        }
+    }
+    
+    void View::write(slim::XmlNode *node) const{
+        
+    }
+    
+    //View 储存图片的数据
+    void stepView::read(const XmlNode *node){
+        assert( node != NULL );
+        
+        NodeIterator iter;
+        const XmlNode* childNode = NULL;
+        const XmlAttribute* attribute = NULL;
+        
+        //读取根节点下面的View，与asminfo并行
+        childNode = node->findChild( "Part" );
+        if ( childNode != NULL )
+        {
+            
+            m_partView.read(childNode);
+            
+        }
+        
+        attribute = node->findAttribute( "viewName" );
+        if ( attribute != NULL )
+        {
+            fileName = attribute->getString();
+        }
+        
+        attribute = node->findAttribute("ImageData");
+        
+        if (attribute != NULL) {
+            
+            ModelData = attribute->getString();
+            
+            //这里注意转码问题，中文字符用下面coding方式，不然会乱码
+            NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+            
+            NSString *dataStr = [NSString stringWithCString:ModelData.c_str() encoding:[NSString defaultCStringEncoding]];
+            NSString *nameStr = [NSString stringWithCString:fileName.c_str() encoding:enc];
+            
+            if ([nameStr rangeOfString:@"视图1"].location == NSNotFound ) {
+                
+                return;
+            }
+            
+            NSString *docName = [NSString stringWithCString:stepViewName.c_str() encoding:[NSString defaultCStringEncoding]];
+            
+            //base64Decode
+            NSData *theData = [[NSData alloc]
+                               initWithBase64EncodedString:dataStr options:NSDataBase64DecodingIgnoreUnknownCharacters];
+            
+            //创建文件管理器
+            NSFileManager *fileManager = [NSFileManager defaultManager];
+            
+            //获取document路径,括号中属性为当前应用程序独享
+            
+            NSArray *directoryPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+            
+            NSString *documentDirectory = [directoryPaths objectAtIndex:0];
+            
+            //定义记录文件全名以及路径的字符串filePath
+            NSString *docFilePath = [documentDirectory stringByAppendingPathComponent:docName];
+            
+            NSString *filePath = [docFilePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",nameStr]];
+            
+            //创建子文件夹
+            BOOL isDir = NO;
+            BOOL existed = [fileManager fileExistsAtPath:docFilePath isDirectory:&isDir];
+            if ( !(isDir == YES && existed == YES) )
+            {
+                [fileManager createDirectoryAtPath:docFilePath withIntermediateDirectories:YES attributes:nil error:nil];
+            }
+            
+            //查找文件，如果不存在，就创建一个文件
+            if (![fileManager fileExistsAtPath:filePath]) {
+                
+                [fileManager createFileAtPath:filePath contents:theData attributes:nil];
+                
+            }
+
+        }
+        
+    }
+    
+    void stepView::write(slim::XmlNode *node) const{
+        
+    }
+    
+    //partView
+    void partView::read(const XmlNode *node)
+    {
+        assert( node != NULL );
+        
+        NodeIterator iter;
+        //        const XmlNode* childNode = NULL;
+        const XmlAttribute* attribute = NULL;
+        
+        for (int i = 0; i<16; i++) {
+            
+            matrixKey = 'M'+i;
+            
+            //string转const char
+            const char* c_s = matrixKey.c_str();
+            
+            //matrixStr
+            attribute = node->findAttribute( c_s );
+            if ( attribute != NULL )
+            {
+                matrixStr = attribute->getString();
+            }
+            
+            //把matrix字符串转成vector
+            
+            const char *str = matrixStr.c_str();
+            float floatValue = atof(str);
+            matrix.push_back(floatValue);
+        }
     }
     
     //fileNode
@@ -200,12 +348,6 @@ namespace I3D_XML
         
 //        读取step信息
         childNode = node->findFirstChild( "step", iter );
-        
-//        childNode = node->findChild( "step" );
-//        if ( childNode != NULL )
-//        {
-//            m_step.read(childNode);
-//        }
         
         while ( childNode != NULL )
         {

@@ -40,7 +40,7 @@
     
     initOsgNav(self.frame.size.width, self.frame.size.height, windata);
     
-    osgDraw( _step );
+    osgDraw( _step, _isFromPic );
     
     //step = -1 时表示非i3d文件
     //step = 0 总装图
@@ -59,7 +59,7 @@
 
 - (void)updateScene: (CADisplayLink *)sender {
     
-    osgDraw( _step );
+    osgDraw( _step, _isFromPic );
     
 }
 

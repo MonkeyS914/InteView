@@ -196,7 +196,7 @@ osg::ref_ptr<osg::Geode> createQuad()
     return geode.get();
 }
 
-osg::ref_ptr<osg::Group> OsgConverter::readFile(std::string cfileName, int step , std::vector<std::string> filedocument)
+osg::ref_ptr<osg::Group> OsgConverter::readFile(std::string cfileName, int step ,int isFromPic, std::vector<std::string> filedocument)
 {
     
     for(int i=0;i<filedocument.size();i++)
@@ -221,7 +221,7 @@ osg::ref_ptr<osg::Group> OsgConverter::readFile(std::string cfileName, int step 
 	}
     else if(cfileName.find(".i3d") != -1 )
     {
-        readI3dFile(cfileName, step, transform);
+        readI3dFile(cfileName, step,isFromPic, transform);
     }
 	else
 	{
@@ -377,7 +377,7 @@ std::string OsgConverter::getMenuClass(){
     return menuClass;
 }
 
-bool OsgConverter::readI3dFile(std::string cfileName, int step, osg::ref_ptr<osg::MatrixTransform>& parent)
+bool OsgConverter::readI3dFile(std::string cfileName, int step,int isFromPic, osg::ref_ptr<osg::MatrixTransform>& parent)
 {
 
     std::string ivafinalpath;
@@ -506,7 +506,13 @@ bool OsgConverter::readI3dFile(std::string cfileName, int step, osg::ref_ptr<osg
         fclose(fp);
         
         osg::ref_ptr<osg::MatrixTransform> transform = new osg::MatrixTransform();
+        
         std::vector<float> tempM = root.m_asmProcess.m_asmProcRoot.m_step[step].m_componentPackage.m_part[i].matrix;
+        
+        if (isFromPic) {
+            
+        }
+        
         transform->setMatrix(osg::Matrix(tempM[0],tempM[1],tempM[2],tempM[3],
                                          tempM[4],tempM[5],tempM[6],tempM[7],
                                          tempM[8],tempM[9],tempM[10],tempM[11],

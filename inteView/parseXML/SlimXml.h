@@ -144,6 +144,8 @@ public:
 	size_t getChildCount() const;
 
 	XmlNode* findChild(const Char* name) const;
+    XmlNode* findFirstChild(NodeIterator& iter) const;
+    XmlNode* findNextChild(NodeIterator& iter) const;
 	XmlNode* findFirstChild(const Char* name, NodeIterator& iter) const;
 	XmlNode* findNextChild(const Char* name, NodeIterator& iter) const;
 	size_t getChildCount(const Char* name) const;
