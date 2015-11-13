@@ -508,9 +508,10 @@ bool OsgConverter::readI3dFile(std::string cfileName, int step,int isFromPic, os
         osg::ref_ptr<osg::MatrixTransform> transform = new osg::MatrixTransform();
         
         std::vector<float> tempM = root.m_asmProcess.m_asmProcRoot.m_step[step].m_componentPackage.m_part[i].matrix;
-        
+    
         if (isFromPic) {
-            
+            //根据图片位置显示
+            tempM = root.m_view.m_stepView.m_partView[i].matrix;
         }
         
         transform->setMatrix(osg::Matrix(tempM[0],tempM[1],tempM[2],tempM[3],

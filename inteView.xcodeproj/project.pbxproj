@@ -84,6 +84,7 @@
 		A59D98881BE6F9E600C69FEA /* osgView.mm in Sources */ = {isa = PBXBuildFile; fileRef = A59D98871BE6F9E600C69FEA /* osgView.mm */; };
 		A5A72C9F1BDF75C7002CCC44 /* skydome.ive in Resources */ = {isa = PBXBuildFile; fileRef = A5A72C9E1BDF75C7002CCC44 /* skydome.ive */; };
 		A5A72CA11BDF770D002CCC44 /* teapot.IVE in Resources */ = {isa = PBXBuildFile; fileRef = A5A72CA01BDF770D002CCC44 /* teapot.IVE */; };
+		A5CD7E871BF41E1800961E39 /* UINavigationController+PushAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CD7E861BF41E1800961E39 /* UINavigationController+PushAnimation.m */; };
 		A5D8E5571BE3045B0088FCAA /* libosgDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A97C871A3E76E900C3ECEB /* libosgDB.a */; };
 /* End PBXBuildFile section */
 
@@ -219,6 +220,8 @@
 		A59D98871BE6F9E600C69FEA /* osgView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = osgView.mm; sourceTree = "<group>"; };
 		A5A72C9E1BDF75C7002CCC44 /* skydome.ive */ = {isa = PBXFileReference; lastKnownFileType = file; path = skydome.ive; sourceTree = "<group>"; };
 		A5A72CA01BDF770D002CCC44 /* teapot.IVE */ = {isa = PBXFileReference; lastKnownFileType = file; path = teapot.IVE; sourceTree = "<group>"; };
+		A5CD7E851BF41E1800961E39 /* UINavigationController+PushAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+PushAnimation.h"; sourceTree = "<group>"; };
+		A5CD7E861BF41E1800961E39 /* UINavigationController+PushAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+PushAnimation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +316,7 @@
 		2994CFA319F4D87C0080995C /* inteView */ = {
 			isa = PBXGroup;
 			children = (
+				A5CD7E841BF41E1800961E39 /* category */,
 				A57FE96D1BE0A47F00AF0013 /* Zip */,
 				2993914919F5F1DF002D2FAD /* osg */,
 				2994CFDB19F4DA110080995C /* parseXML */,
@@ -486,6 +490,15 @@
 			path = Zip;
 			sourceTree = "<group>";
 		};
+		A5CD7E841BF41E1800961E39 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				A5CD7E851BF41E1800961E39 /* UINavigationController+PushAnimation.h */,
+				A5CD7E861BF41E1800961E39 /* UINavigationController+PushAnimation.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -604,6 +617,7 @@
 				2994D02119F4DA110080995C /* BEdgeBreakerDecompress.cpp in Sources */,
 				2993915A19F5F1DF002D2FAD /* OsgMainApp.cpp in Sources */,
 				2994D02619F4DA110080995C /* BPolyhedron.cpp in Sources */,
+				A5CD7E871BF41E1800961E39 /* UINavigationController+PushAnimation.m in Sources */,
 				2994D03119F4DA110080995C /* vlogfile.cpp in Sources */,
 				2994D01C19F4DA110080995C /* BAscii.cpp in Sources */,
 				2994D02219F4DA110080995C /* BOpcodeHandler.cpp in Sources */,

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #include "I3D_XML.h"
 #include <cassert>
+#include <string>
 
 using namespace slim;
 #include <string.h>
@@ -17,6 +18,8 @@ using namespace slim;
 
 namespace I3D_XML
 {
+    
+#pragma mark -Root3D;
     //读取root节信息
     void Root3D::read( const XmlNode* node )
     {
@@ -73,7 +76,8 @@ namespace I3D_XML
     {
         
     }
-    
+   
+#pragma mark -modelSpace
     //modelSpace 储存iva和ivp的数据
     void modelSpace::read(const XmlNode *node){
         assert( node != NULL );
@@ -105,6 +109,7 @@ namespace I3D_XML
         
     }
     
+#pragma mark -view
     //View 储存图片的数据
     void View::read(const XmlNode *node){
         assert( node != NULL );
@@ -129,6 +134,7 @@ namespace I3D_XML
         
     }
     
+#pragma mark -stepView
     //View 储存图片的数据
     void stepView::read(const XmlNode *node){
         assert( node != NULL );
@@ -138,12 +144,14 @@ namespace I3D_XML
         const XmlAttribute* attribute = NULL;
         
         //读取根节点下面的View，与asminfo并行
-        childNode = node->findChild( "Part" );
-        if ( childNode != NULL )
+        childNode = node->findFirstChild( "Part", iter );
+        while ( childNode != NULL )
         {
+            m_partView.resize( m_partView.size() + 1 );
+            m_partView.back().read( childNode );
             
-            m_partView.read(childNode);
-            
+            //读取下一个step节点的信息
+            childNode = node->findNextChild( "Part", iter );
         }
         
         attribute = node->findAttribute( "viewName" );
@@ -212,6 +220,7 @@ namespace I3D_XML
         
     }
     
+#pragma mark -partView
     //partView
     void partView::read(const XmlNode *node)
     {
@@ -223,7 +232,15 @@ namespace I3D_XML
         
         for (int i = 0; i<16; i++) {
             
-            matrixKey = 'M'+i;
+            //int转std::string
+            char t[256];
+            std::string s;
+
+            sprintf(t,"%d", i);
+            s = t;
+            
+            //拼接字符串 eg:M0
+            matrixKey = 'M'+s;
             
             //string转const char
             const char* c_s = matrixKey.c_str();
@@ -243,6 +260,11 @@ namespace I3D_XML
         }
     }
     
+    void partView::write(slim::XmlNode *node) const{
+        
+    }
+    
+#pragma mark -fileNode
     //fileNode
     void fileNode::read(const XmlNode *node){
         assert( node != NULL );
@@ -305,6 +327,11 @@ namespace I3D_XML
         
     }
     
+    void fileNode::write(slim::XmlNode *node) const{
+        
+    }
+    
+#pragma mark -asmProcess
     //asmProcess
     void asmProcess::read( const XmlNode* node )
     {
@@ -329,6 +356,7 @@ namespace I3D_XML
         
     }
     
+#pragma mark -asmProcRoot
     //asmProcRoot
     void asmProcRoot::read(const XmlNode *node)
     {
@@ -365,6 +393,7 @@ namespace I3D_XML
         
     }
     
+#pragma mark -step
     //step
     void step::read(const XmlNode *node)
     {
@@ -389,6 +418,11 @@ namespace I3D_XML
         }
     }
     
+    void step::write( XmlNode *node) const{
+        
+    }
+    
+#pragma mark -componentPackage
     //componentPackage
     void componentPackage::read(const XmlNode *node)
     {
@@ -412,6 +446,11 @@ namespace I3D_XML
         
     }
     
+    void componentPackage::write( XmlNode *node) const{
+        
+    }
+    
+#pragma mark -part
     //part
     void part::read(const XmlNode *node)
     {
@@ -463,8 +502,9 @@ namespace I3D_XML
         
     }
     
-    void step::write( XmlNode *node) const{
+    void part::write( XmlNode *node) const{
         
     }
+    
 }
 

@@ -42,6 +42,8 @@
     CGFloat screenWidth;
     
     int step;//加载第几步
+    
+    int isFromPic;//是否按图片位置加载
 }
 
 @end
@@ -69,9 +71,11 @@
     
     screenWidth = [UIScreen mainScreen].bounds.size.width;
     
+    isFromPic = 0;
+    
     [self initTable];
     
-    [self initOsgWindow:0];
+    [self initOsgWindow:0 isFirstInit:YES];
     
     [self.view addSubview:menuTableView];
     [self.view addSubview:backView];
@@ -92,22 +96,58 @@
     [self addMenuBt];
 }
 
-- (void)initOsgWindow:(int)sender{
+- (void) transitionWithType:(NSString *) type WithSubtype:(NSString *) subtype ForView : (UIView *) view
+{
+    
+    //创建CATransition对象
+    CATransition *animation = [CATransition animation];
+    
+    //设置运动时间
+    animation.duration = 1.0;
+    
+    //设置运动type
+    animation.type = type;
+    if (subtype != nil) {
+        
+        //设置子类
+        animation.subtype = subtype;
+    }
+    
+    //设置运动速度
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    
+    [view.layer addAnimation:animation forKey:@"animation"];
+}
+
+- (void)initOsgWindow:(int)sender isFirstInit:(BOOL)isFirstInit {
     
     [menuTableView removeFromSuperview];
-    [backView removeFromSuperview];
+    
+//    CATransition *transition = [CATransition animation];
+//    transition.duration = 2.0;
+//    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+//    transition.type = kCATransitionMoveIn;
+//    transition.subtype = kCATransitionFromTop;
+//    [bgView.layer addAnimation:transition forKey:nil];
+    
+    if (!isFirstInit) {
+        
+    }
+    else{
+        [bgView removeFromSuperview];
+    }
     
     bgView = [[osgView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     bgView.backgroundColor = [UIColor whiteColor];
     bgView.filePath = filePath;
     bgView.step = sender;
+    bgView.isFromPic = isFromPic;
     bgView.delegate = self;
     [bgView initOsgWindow];
     
     [self.view addSubview:bgView];
     [self.view addSubview:menuTableView];
     [self.view addSubview:backView];
-    
 }
 
 - (void)setMenuClass{
@@ -298,10 +338,13 @@
     
     [bgView releaseObject];
     
+    [bgView removeFromSuperview];
+    
     [bgView release];
     
-    [self initOsgWindow:step];
+    [self initOsgWindow:step isFirstInit:NO];
     
+    [self transitionWithType:@"pageCurl" WithSubtype:@"kCATransitionFromRight" ForView:self.view];
 }
 
 - (void)alertViewType:(UIButton *)bt {

@@ -88,7 +88,7 @@ namespace I3D_XML
         std::string ModelData;
         std::string stepViewName;
         
-        partView m_partView;
+        std::vector<partView> m_partView;
         
     };
     
